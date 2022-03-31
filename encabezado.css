@@ -3,17 +3,42 @@ body{
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 header{
     display: flex;
-    height: 70px;
+    min-height: 70px;
     background-color: coral;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
 .logo{
     display: flex;
+    align-items: center;
 }
 
 .logo img{
     height: 50px;
+    margin-left: 10px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: white;
+
+}
+
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
 }
