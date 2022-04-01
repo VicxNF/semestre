@@ -1,17 +1,7 @@
-.contenedor-columnas{
-    width: 100%;
-    margin: auto;
-    margin-bottom: 50px;
+p{
+    text-align: justify;
 }
 
-.columnasx3{
-    width: 25%;
-    float: left;
-    padding: 20px 20px;
-    box-sizing: border-box;
-    margin: auto;
-}
-
-.columnasx3 img{
-    width: 100%;
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
