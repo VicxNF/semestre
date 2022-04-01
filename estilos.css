@@ -1,13 +1,11 @@
 body
 {
-    background-color: lightslategray;
-    margin: 0px;
-    padding: 0px;
+    background-color: yellow;
 }
 
 #izquierda
 {
-    background-color: green;
+    background-image: linear-gradient(yellow, orange);
     width: 20%;
     float: left;
     height: 100vh;
@@ -15,7 +13,7 @@ body
 
 #derecha
 {
-    background-color: green;
+    background-image: linear-gradient(yellow, orange);
     width: 20%;
     float: right;
     height: 100vh;
@@ -76,4 +74,22 @@ nav a:hover{
     header{
         flex-direction: column;
     }
+}
+
+.contenedor-columnas{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.columnasx3{
+    width: 25%;
+    float: left;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.columnasx3 img{
+    width: 100%;
 }
