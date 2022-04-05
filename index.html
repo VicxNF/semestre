@@ -10,98 +10,126 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 </head>
-<body>
+<body style="background-color: yellow;">
     
-    <div class="container">
-        <nav class="navbar navbar-expand-md " style="background-color: yellow;">
-          <div class="container-fluid" style="background-color: yellow;">
-            <img src="logo planta.png" alt="" height="40" width="40">
-            <a href="#" class="navbar-brand" style="color: black;">Insumos Verdes</a>
-            <button type="button" class="navbar-toggler"data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="MenuNavegacion" class="collapse navbar-collapse">
-              <ul class="navbar-nav ms-3">
-                <li class="nav-items"><a class="nav-link" href="#" style="color: black;">Inicio</a></li>
-                <li class="nav-items"><a class="nav-link" href="#" style="color: black;">Equipo</a></li>
-                <li class="nav-items"><a class="nav-link" href="#" style="color: black;">Ayuda</a></li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: black;">
-                    Opciones de Soporte
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#" style="color: black;">Manuales</a></li>
-                    <li><a class="dropdown-item" href="#" style="color: black;">Base de Conocimientos</a></li>
-                    <li><a class="dropdown-item" href="#" style="color: black;">Contacta con Nosotros</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: yellow;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="logo planta.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+              Insumos Verdes
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
     </div>
+  </nav>
     <div class="container">
         <div class="row">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="girasoles.jpg" class="d-block w-100" alt="..." height="600" width="300">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="tulipanes.jpg" class="d-block w-100" alt="..." height="600" width="300">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="orquideas.jpg" class="d-block w-100" alt="..." height="600" width="300">
-                  </div>
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="tulipanes.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Tulipanes</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
               </div>
+              <div class="carousel-item">
+                <img src="girasoles.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Girasoles</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="orquideas.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Orquideas</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
     </div>
     <div class="container mt-5">
       <h4>Nuestros Productos</h4>
       <div class="row row-cols-1 row-cols-md-4 g-4">
         <div class="col">
-          <div class="card">
+          <div class="card border-primary mb-3">
             <img src="macetero.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <button type="button" class="btn btn-outline-success">Success</button>
+              <h5 class="card-title">Maceteros</h5>
+              <p>Los mejores maceteros para tus plantas las encontrarás aquí!!!</p>
+              <a href="#" class="btn btn-outline-primary">Ver Mas...</a>
               </div>
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card border-primary mb-3">
             <img src="tierra.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <button type="button" class="btn btn-outline-success">Success</button>
+              <h5 class="card-title">Tierra de Hojas</h5>
+              <a href="#" class="btn btn-outline-primary">Ver Mas...</a>
               </div>
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card border-primary mb-3">
             <img src="flores.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <button type="button" class="btn btn-outline-success">Success</button>
+              <h5 class="card-title">Flores</h5>
+              <a href="#" class="btn btn-outline-primary">Ver Mas...</a>
               </div>
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card border-primary mb-3">
             <img src="arbustos.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <button type="button" class="btn btn-outline-success">Success</button>
+              <h5 class="card-title">Arbustos</h5>
+              <a href="#" class="btn btn-outline-primary">Ver Mas...</a>
               </div>
           </div>
         </div>
