@@ -1,13 +1,6 @@
-body
-{
-    background-color: green;
-    margin: 0px;
-    padding: 0px;
-}
-
 #izquierda
 {
-    background-color: green;
+    background-image: linear-gradient(yellow, orange);
     width: 20%;
     float: left;
     height: 100vh;
@@ -15,7 +8,7 @@ body
 
 #derecha
 {
-    background-color: green;
+    background-image: linear-gradient(yellow, orange);
     width: 20%;
     float: right;
     height: 100vh;
@@ -23,52 +16,83 @@ body
 
 #encabezado
 {
-    background-color: gainsboro;
+    background-color: blue;
     height: 25vh;
 }
 
-  #header {
-    margin:auto;
-    width: 500px;
-    font-family: Arial, Helvetica, sans-serif;
-    float: left;
+#encabezadoMenu{
+    background-color: aqua;
 }
 
-ul, ol {
-    list-style: none;
+
+
+body{
+    font-family: sans-serif;
+    margin: 0;
 }
 
-.nav li a {
-    background-color: gainsboro;
-    color: black;
+a{
     text-decoration: none;
-    padding: 10px 10px;
-    display: block;
+    color: black;
 }
 
-.nav li a:hover {
-    background-color: gray;
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: coral;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
-.nav > li {
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+    margin-left: 10px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: white;
+
+}
+
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+}
+
+.contenedor-columnas{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.columnasx3{
+    width: 25%;
     float: left;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    margin: auto;
 }
 
-.nav li ul {
-    display:none;
-    position: absolute;
-    min-width: 140px;
+.columnasx3 img{
+    width: 100%;
 }
 
-.nav li:hover > ul {
-    display: block;
+p{
+    text-align: justify;
 }
 
-.nav li ul li {
-    position: relative;
-}
-
-.nav li ul li ul {
-    right: -140px;
-    top: 0px;
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
