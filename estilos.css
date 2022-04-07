@@ -68,6 +68,7 @@ header{
 nav a{
     font-weight: 600;
     padding-right: 10px;
+
 }
 
 nav a:hover{
@@ -101,9 +102,95 @@ nav a:hover{
 
 p{
     text-align: justify;
+    
 }
 
 .card{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/*---CSS Equipo de trabajo----*/
+
+
+/* NAV */
+.navbar-brand > img {
+    width: 60px;
+
+}
+
+
+.icons-social-networks >a{
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bg-facebook{
+    background-color: #023693;
+}
+
+.bg-twitter{
+    background-color: #33a9f3;
+}
+
+.bg-instagram{
+    background-color: #f1066b;
+}
+
+.photo-frame{
+    font-size: 20px;
+}
+
+.photo-frame::before, .photo-frame::after{
+    content: "";
+    display: block;
+    width: var(--box-size);
+    height: var(--box-size);
+    position: absolute;
+    z-index: -10;
+    animation: turnZ 7s linear alternate-reverse;
+}
+
+.photo-frame::before{
+    --box-size: 3em;
+    background-image: radial-gradient(
+        var(--color-blue-medium) 50%,
+        var(--color-purple) 50%
+
+    );
+    top: calc( 99% - (var(--box-size) / 2));
+    right: calc( 99% - (var(--box-size) / 2));
+}
+
+.photo-frame::after{
+    --box-size: 5em;
+    bottom: calc( 98% - (var(--box-size) / 2));
+    left: calc( 98% - (var(--box-size) / 2));
+    background: linear-gradient(
+        45deg, var(--color-gray-medium) 45% ,
+        transparent 45% 
+    ),
+    radial-gradient(
+        var(--color-purple) 30%,
+        var(--color-yellow) 30% 70%, 
+        var(--color-gray-medium) 70%, 
+        transparent 70%
+    );
+}
+
+.header-main{
+    min-height: 100vh;
+}
+
+/* personas */
+.icon-service{
+    --box-size: 70px;
+    width: var(--box-size);
+    height: var(--box-size);
+    padding: 10px;
+}
