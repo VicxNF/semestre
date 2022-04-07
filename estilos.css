@@ -104,6 +104,7 @@ p{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+<<<<<<< HEAD
 /*---CSS Equipo de trabajo----*/
 
 
@@ -189,3 +190,5 @@ p{
     height: var(--box-size);
     padding: 10px;
 }
+=======
+>>>>>>> 494750d2677c53e65c4c4b59e397698bf7d355d7
