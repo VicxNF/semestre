@@ -202,13 +202,6 @@ p{
     font-family: 'Poppins', sans-serif
 }
 
-body {
-    background: linear-gradient(135deg, yellow, orangered);
-    background: linear-gradient(135deg, yellow, orangered);
-    background-image: url(img/campo.webp);
-    background-image: url(img/campo.webp);
-    min-height: 93vh
-}
 
 .wrapper {
     max-width: 500px;
@@ -413,4 +406,13 @@ body {
     .fab.fa-envira{
         font-size: 12rem;
     }
+}
+
+body{
+    background: linear-gradient(yellow, orangered);
+}
+
+.bg{
+    background-image: url(img/flores\ naranjas.jpg);
+    background-position: center center;
 }
