@@ -384,29 +384,6 @@ p{
     }
 }
 
-.intro{
-    height: 100%;
-}
-
-@media(min-height: 300px) and (min-height: 450px){
-    .intro{
-        height: auto;
-    }
-}
-
-.gradient-custom{
-    background: linear-gradient(yellow, orangered)
-}
-
-.fab.fa-envira{
-    font-size: 19rem;
-}
-
-@media (max-width: 991px){
-    .fab.fa-envira{
-        font-size: 12rem;
-    }
-}
 
 body{
     background: linear-gradient(yellow, orangered);
