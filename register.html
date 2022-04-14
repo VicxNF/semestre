@@ -65,38 +65,44 @@
     </div>
   </nav>
 
-    <div class="container w-75 bg-warning mt-5 rounded shadow">
-        <div class="row align-items-stretch">
-            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
-            </div>
-            <div class="col bg-white p-5 rounded-end">
-                <div class="text-end">
-                    <img src="img/logo planta.png" width="48" alt="">
-                </div>
-                <h2 class="fw-bold text-center py-5">Bienvenido</h2>
-
-                <!--Login-->
-
-                <form action="#">
-                    <div class="mb-4">
-                        <label for="email" class="form-label">Correo Electronico</label>
-                        <input type="email" class="form-control">
-                    </div>
-                    <div class="mb-4">
-                        <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control">
-                    </div>
-                    <div class="mb-4 form-check">
-                        <input type="checkbox" name="connected" class="form-check-input">
-                        <label for="connected" class="form-check-label">Mantenerme Conectado</label>
-                    </div>
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
-                    </div>
-                </form>
-            </div>
+  <div class="container w-75 bg-warning mt-5 rounded shadow">
+    <div class="row align-items-stretch">
+      <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded"></div>
+      <div class="col bg-white p-5 rounded-end">
+        <div class="text-end">
+          <img src="img/logo planta.png" width="48" alt="">
         </div>
+        <h2 class="fw-bold text-center py-5">Bienvenido</h2>
+
+        <!--Register-->
+
+        <form action="#">
+          <div class="mb-4">
+            <label for="email" class="form-label">Correo Electronico</label>
+            <input type="email" class="form-control" placeholder="ejemplo@ejemplo.ejemplo">
+          </div>
+          <div class="mb-4">
+            <label for="tel" class="form-label">Numero de Telefono</label>
+            <input type="tel" class="form-control" placeholder="9 1234 5678">
+          </div>
+          <div class="mb-4">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control">
+          </div>
+          <div class="mb-4">
+            <label for="password" class="form-label">Confirmar Contraseña</label>
+            <input type="password" class="form-control">
+          </div>
+          <div class="mb-4 form-check">
+            <input type="checkbox" name="correos" class="form-check-input">
+            <label for="correos" class="form-check-label">Deseas recibir nuestras novedades en su correo?</label>
+          </div>
+            <input type="submit" class="btn btn-primary" value="Registrarse">
+            <input type="reset" class="btn btn-primary" value="Limpiar">
+        </form>
+      </div>
     </div>
+  </div>
     
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 

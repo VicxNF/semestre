@@ -2,23 +2,6 @@ main > .container{
     padding: 30px 0;
 }
 
-
-#izquierda
-{
-    background-image: linear-gradient(yellow, orange);
-    width: 20%;
-    float: left;
-    height: 100vh;
-}
-
-#derecha
-{
-    background-image: linear-gradient(yellow, orange);
-    width: 20%;
-    float: right;
-    height: 100vh;
-}
-
 #encabezado
 {
     background-color: blue;
