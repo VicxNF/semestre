@@ -430,3 +430,31 @@ h4{
     border-top: 1px solid rgb(255, 255, 255, 0.8);
     border-bottom: 1px solid rgb(255, 255, 255, 0.8);
 }
+
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.sproduct select{
+    display: block;
+    padding: 5px 10px;
+}
+
+.sproduct input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.sproduct input:focus{
+    outline: none;
+}
+
