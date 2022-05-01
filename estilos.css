@@ -458,3 +458,48 @@ h4{
     outline: none;
 }
 
+.container{
+    margin-top: 110px !important;
+}
+
+.card{
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: transform .3s;
+}
+
+.card:hover{
+    transform: translateY(-15px);
+    transition: transform .3s;
+}
+
+.text1{
+    font-size: 13px;
+    color: #cbcbcb;
+}
+
+.info{
+    line-height: 17px;
+}
+
+.cost span{
+    color: orangered;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.producto{
+    background: greenyellow;
+}
+
+.margarita:hover, .azaleas:hover, .lirios:hover, .hortensias:hover{
+    opacity: .8;
+}
+
+.cursor{
+    cursor: pointer;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
