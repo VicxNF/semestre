@@ -12,67 +12,197 @@
 
 </head>
 <body>
-    <div class="gallery">
-        <div class="content">
-            <img src="img/margaritas.jpg" alt="">
-            <h3 class="desc">Margaritas</h3>
-            <p>Lorem Ipsum is simply dummy</p>
-            <h6>$2.990</h6>
-            <ul>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star"></i></li>
-            </ul>
-            <button class="buy">Agregar al Carrito</button>
-        </div>
 
-        <div class="content">
-            <img src="img/azaleas.jpg" alt="">
-            <h3 class="desc">Azaleas</h3>
-            <p>Lorem Ipsum is simply dummy</p>
-            <h6>$2.990</h6>
-            <ul>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star"></i></li>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: yellow;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" >
+            <img src="img/logo planta.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
+                  Insumos Verdes
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalogo.html">Catalogo</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ayuda
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="nosotros.html">Acerca de la Pagina</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="equipo.html">Equipo de Trabajo</a></li>
+                </ul>
+              </li>
             </ul>
-            <button class="buy">Agregar al Carrito</button>
+            <form class="d-flex input-group w-auto">
+                <input
+                  type="search"
+                  class="form-control rounded"
+                  placeholder="Search"
+                  aria-label="Search"
+                  aria-describedby="search-addon"
+                />
+                <a class="input-group-text border-0" href="#">
+                  <i class="bi bi-search"></i>
+                </a>
+              </form>
+              <br>
+              <div class="d-flex align-items-center">
+                <a href="login.html" class="btn btn-outline-warning btn-rounded px-3 me-2">Iniciar Sesion</a>
+            </div>
+            <div class="d-flex align-items-center">
+              <!-- Icon -->
+              <a class="text-reset me-3" href="#">
+                <i class="bi bi-cart"></i>
+              </a>
+          </div>
         </div>
+      </nav>
 
-        <div class="content">
-            <img src="img/hortensias.jpg" alt="">
-            <h3 class="desc">Hortensias</h3>
-            <p>Lorem Ipsum is simply dummy</p>
-            <h6>$2.990</h6>
-            <ul>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star"></i></li>
-            </ul>
-            <button class="buy">Agregar al Carrito</button>
-        </div>
+    <div class="main-wrapper rounded">
+        <div class="container">
+            <div class="product-div">
+                <div class="product-div-left">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="flores.html">Flores</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Margaritas</li>
+                      </ol>
+                    <div class="img-container">
+                        <img src="img/margaritas.jpg" alt="">
+                    </div>
+                    <div class="hover-container">
+                        <div>
+                            <img class="imgproducto" src="img/margaritas.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="imgproducto" src="img/margaritas2.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="imgproducto" src="img/margaritas3.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="imgproducto" src="img/margaritas4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
 
-        <div class="content">
-            <img src="img/lirios rosados.jpg" alt="">
-            <h3 class="desc">Lirios Rosados</h3>
-            <p>Lorem Ipsum is simply dummy</p>
-            <h6>$2.990</h6>
-            <ul>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star-fill checked"></i></li>
-                <li><i class="bi bi-star"></i></li>
-            </ul>
-            <button id="comprar" class="buy">Agregar al Carrito</button>
+                <div class="product-div-right">
+                    <span class="product-name">Margaritas</span>
+                    <span class="product-price">$2.990</span>
+                    <select class="my-3">
+                        <option>Seleccione opción</option>
+                        <option>Arreglo</option>
+                        <option>Ramo</option>
+                        <option>Macetero</option>
+                      </select>
+                      <input type="number" value="1">
+                    <p class="product-description">Margarita, arbusto leñoso muy ramificado y de copa globosa, que puede llegar a medir de 0,50 a 1,50 m de altura. Sus hojas son bipinnadas de 5-10 cm de largo y sus flores están reunidas en capítulos de 3-5 cm de diámetro con flores en el centro de color amarillo y periféricas blancas.</p>
+                    <div class="btn-groups">
+                        <button type="button" class="add-cart-btn">
+                            <i class="bi bi-cart"> Agregar al Carrito</i>
+                        </button>
+                        <button type="button" class="buy-now-btn">
+                            <i class="bi bi-wallet"> Comprar Ahora</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <section id="featured" class="my-5 pb-5">
+      <div class="container text-center mt-5 py-5">
+        <h3>Productos relacionados</h3>
+        <hr class="mx-auto">
+      </div>
+      <div class="gallery">
+
+        <div class="content">
+            <img class="img-producto rounded" src="img/azaleas.jpg" alt="">
+            <h3 class="nombre">Azaleas</h3>
+            <p class="desc">Lorem Ipsum is simply dummy</p>
+            <h6 class="precio">$2.990</h6>
+            <button class="buy">Agregar al Carrito</button>
+        </div>
+
+        <div class="content">
+            <img class="img-producto rounded" src="img/hortensias.jpg" alt="">
+            <h3 class="nombre">Hortensias</h3>
+            <p class="desc">Lorem Ipsum is simply dummy</p>
+            <h6 class="precio">$2.990</h6>
+            <button class="buy">Agregar al Carrito</button>
+        </div>
+
+        <div class="content">
+            <img class="img-producto rounded" src="img/lirios rosados.jpg" alt="">
+            <h3 class="nombre">Lirios Rosados</h3>
+            <p class="desc">Lorem Ipsum is simply dummy</p>
+            <h6 class="precio">$2.990</h6>
+            <button class="buy">Agregar al Carrito</button>
+        </div>
+    </div>
+    </section>
+
+    <div class="container-fluid">
+      <div class="row">
+        <footer>
+          <div class="mt-5 pt-5 pb-5 footer">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-5 col-xs-12">
+                          <h2>Acerca de Nosotros</h2>
+                          <p class="pr-5 text-white">
+                            Somos una comunidad que busca ayudar a las personas en su misión de darle vida a los espacios, 
+                            trayendo lo mejor de la naturaleza a los hogares de cada persona, nos gustaría  que las plantas estén siempre presentes en nuestra rutina, 
+                            para que sus propiedades y beneficios nos ayuden a llevar una mejor calidad de vida.
+                            Queremos llevar las plantas a los distintos rincones de la ciudad, aportando así nuestro granito de arena en construir un mundo más verde.  </p>
+                          </p>
+                          <ul class="social">
+                              <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                              <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                              <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                          </ul>
+                      </div>
+                      <div class="col-lg-3 col-xs-12 links">
+                          <h4 class="mt-lg-0 mt-sm-3">Quick Links</h4>
+                          <ul class="m-0 p-0">
+                              <li>- <a href="#">Maceteros</a></li>
+                              <li>- <a href="#">Flores</a></li>
+                              <li>- <a href="#">Tierra para Hojas</a></li>
+                              <li>- <a href="#">Arbustos</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-lg-4 col-xs-12 location">
+                          <h4 class="mt-lg-0 mt-sm-4">Contactanos</h4>
+                          <p><i class="bi bi-whatsapp">+56 9 6493 5041</i></p>
+                          <p><i class="bi bi-whatsapp">+56 9 8317 3829</i></p>
+                          <p><i class="bi bi-whatsapp">+56 9 6582 3338</i></p>
+                      </div>
+                  </div>
+                  <div class="row mt-5">
+                      <div class="col copyright text-center">
+                          <p><small class="text-white-50">
+                              All Rights Reserved &copy; Aboc Dev Team 2022
+                          </small></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
+    </div>
+  </div>
+
+
+    <script src="script.js"></script>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
