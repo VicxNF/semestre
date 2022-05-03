@@ -660,6 +660,25 @@ h4{
     margin-right: 8px;
 }
 
+.coupon-btn{
+    background-color: yellow;
+    border: 2px solid yellow;
+    margin-right: 8px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 15px 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.coupon-btn:hover{
+    background-color: #fff;
+    color: yellow;
+}
+
 .add-cart-btn{
     background-color: yellow;
     border: 2px solid yellow;
@@ -680,6 +699,7 @@ h4{
     background-color: #fff;
     color: #000;
 }
+
 
 @media screen and (max-width: 992px){
     .product-div{

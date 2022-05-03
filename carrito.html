@@ -41,6 +41,7 @@
               </ul>
             </li>
           </ul>
+          <div class="d-flex align-items-center">
           <form class="d-flex input-group w-auto">
               <input
                 type="search"
@@ -53,15 +54,22 @@
                 <i class="bi bi-search"></i>
               </a>
             </form>
+          </div>
             <br>
             <div class="d-flex align-items-center">
-              <a href="login.html" class="btn btn-outline-warning btn-rounded px-3 me-2">Iniciar Sesion</a>
+              <a href="login.html" class="btn btn-outline-warning btn-rounded px-3 me-2">
+                <i class="bi bi-person-fill"></i>
+              </a>
           </div>
           <div class="d-flex align-items-center">
             <!-- Icon -->
-            <a class="text-reset me-3" href="#">
-              <i class="bi bi-cart"></i>
-            </a>
+          <a href="carrito.html" class="cart-btn btn btn-outline-warning btn-rounded px-3 me-2 position-relative">
+            <i class="bi bi-cart"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
         </div>
       </div>
     </nav>
@@ -124,7 +132,9 @@
                     <h5>Cupon de Descuento</h5>
                     <p>Ingresa aqui tu codigo de descuento</p>
                     <input type="text" placeholder="Cupon de Descuento">
-                    <button>Aplicar Cupon</button>
+                      <button type="button" class="coupon-btn">
+                          Agregar al Carrito
+                      </button>
                 </div>
             </div>
             <div class="total col-lg-6 col-md-6 col-12 mb-4">
@@ -144,7 +154,9 @@
                         <p>$10.990</p>
                     </div>
 
-                    <button>Proceder con la compra</button>
+                    <button type="button" class="coupon-btn">
+                      Proceder con la compra
+                  </button>
                 </div>
             </div>
         </div>
