@@ -1,14 +1,4 @@
-function iniciarMap(){
-    var coord = {lat:-33.4997506,lng:-70.6151254};
-    var map = new google.maps.Map(document.getElementById('map'),{
-        zoom: 10,
-        center: coord
-    });
-    var marker = new google.maps.Marker({
-        position: coord,
-        map: map
-    });
-}
+
 
 const allHoverImages = document.querySelectorAll('.hover-container div img');
 const imgContainer = document.querySelector('.img-container');
@@ -113,3 +103,21 @@ function setItems(product){
 }
 
 onLoadCartNumbers();
+
+function initMap(){
+    const ubicacion = new Localizacion(()=>{
+
+        const options = {
+            center: {
+                lat: ubicacion.latitude,
+                lng: ubicacion.longitude
+            },
+
+            zoom: 15
+        }
+
+        var map = document.getElementById('map');
+
+        const mapa = new google.map.Map(map, options);
+    });
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,15 +12,15 @@
     </style>
 </head>
 <body>
-    <button onclick="findMe()">Mostrar ubicacion</button>
+    <button onclick="findMe()">Mostrar Ubicacion</button>
     <div id="map"></div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7AN26fmbNxMSXGx5nNwh4mK46_bBLMGI"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQDqAjTL_yzzfvmCk1nZLWJMdl65dZco"></script>
     <script>
         function findMe(){
             var output = document.getElementById('map');
 
-            if (navigator.geolocation) {
+            if (navigator.geolocation){
                 output.innerHTML = "<p>Tu navegador soporta Geolocalizacion</p>";
             }else{
                 output.innerHTML = "<p>Tu navegador no soporta Geolocalizacion</p>";
@@ -30,11 +30,11 @@
                 var latitude = posicion.coords.latitude;
                 var longitude = posicion.coords.longitude;
 
-                var imgURL ="https://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&size=600x300&markers=color:red%7C"+latitude+","+longitude+"&key=AIzaSyD7AN26fmbNxMSXGx5nNwh4mK46_bBLMGI";
+                output.innerHTML = "<p>Latitud: "+latitude+"<br>Longitud: "+longitude+"</p>";
 
-                output.innerHTML ="<img src='"+imgURL+"'>";
+                var imgUrl = "https://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&size=600x300&markers=color:red%7C"+latitude+","+longitude+"&key=AIzaSyDTQDqAjTL_yzzfvmCk1nZLWJMdl65dZco";
 
-
+                output.innerHTML = "<img src='"+imgUrl+"'>";
             }
 
             function error(){
@@ -42,7 +42,6 @@
             }
 
             navigator.geolocation.getCurrentPosition(localizacion,error);
-
         }
     </script>
 </body>
