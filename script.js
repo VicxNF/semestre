@@ -1,6 +1,6 @@
 
 
-const allHoverImages = document.querySelectorAll('.hover-container div img');
+/*const allHoverImages = document.querySelectorAll('.hover-container div img');
 const imgContainer = document.querySelector('.img-container');
 
 window.addEventListener('DOMContentLoaded', () =>{
@@ -14,7 +14,7 @@ allHoverImages.forEach((image) => {
         image.parentElement.classList.add('active');
     });
 });
-
+*/
 function resetActiveImg(){
     allHoverImages.forEach((img) => {
         img.parentElement.classList.remove('active');
@@ -53,6 +53,7 @@ let products = [
 for (let i=0; i < carts.length; i++){
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i]);
+        totalCost(products[i])
     })
 }
 
@@ -100,6 +101,41 @@ function setItems(product){
     }
 
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+}
+
+function totalCost(product){
+    //console.log("El precio del producto es", product.price);
+    let cartCost = localStorage.getItem('totalCost');
+
+    console.log("My cartCost is", cartCost);
+    console.log(typeof cartCost);
+
+    if(cartCost != null){
+        cartCost = parseInt(cartCost);
+        localStorage.setItem("totalCost", cartCost + product.price);
+    } else{
+        localStorage.setItem("totalCost", product.price);
+    }
+}
+
+function displayCart(){
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector(".products");
+    if(cartItems && productContainer){
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item =>{
+            productContainer.innerHTML += `
+            <div class="product">
+                <i class="bi bi-trash3"></i>
+                <img src="./img/${item.tag}.jpg">
+                <span>${item.name}</span>
+            </div>
+            `
+            
+            
+        });
+    }
 }
 
 onLoadCartNumbers();
