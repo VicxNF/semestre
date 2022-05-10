@@ -157,3 +157,18 @@ function initMap(){
         const mapa = new google.map.Map(map, options);
     });
 }
+
+function validate()
+{
+    var email=document.getElementById("email").value;
+    var password=document.getElementById("password").value;
+    if(email=="admin@gmail.com" && password =="admin")
+    {
+        alert("Ingreso satisfactorio");
+        return false;
+    }
+    else
+    {
+        alert("Ingreso no valido")
+    }
+}

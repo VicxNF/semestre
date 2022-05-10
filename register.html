@@ -14,7 +14,6 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: yellow;">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: yellow;">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html" >
           <img src="img/logo planta.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
@@ -86,7 +85,7 @@
 
         <!--Register-->
 
-        <form action="#" class="needs-validation" novalidate>
+        <form action="#" class="needs-validation" onsubmit="return submitForm(this);" novalidate>
           <div class="mb-4">
             <label for="email" class="form-label">Correo Electronico</label>
             <input type="email" class="form-control" id="email" name="email" required>
@@ -180,6 +179,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
+
+    <script src="script.js"></script>
+  <script src="sweetalert.min.js"></script>
+
+  <script>
+    function submitForm(form){
+      swal({
+        title: "Estas seguro?",
+        text: "Estan todos los datos correctos?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((isOkay) => {
+        if (isOkay) {
+          form.submit();
+        }
+      });
+      return false;
+    }
+  </script>
+
+    
     <script>
       // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
