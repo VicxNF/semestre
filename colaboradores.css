@@ -1,4 +1,4 @@
-.btn{
+#unico{
     text-decoration: none;
     border-radius: 3px;
     padding: 20px 15px;
@@ -6,3 +6,12 @@
     text-shadow: 0 1px 0 rgba(255,255,255,0,3);
 
 }
+
+.text-primary {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  }
+
+.div{
+    padding: 30;
+}  
