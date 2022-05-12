@@ -30,8 +30,6 @@
                 var latitude = posicion.coords.latitude;
                 var longitude = posicion.coords.longitude;
 
-                output.innerHTML = "<p>Latitud: "+latitude+"<br>Longitud: "+longitude+"</p>";
-
                 var imgUrl = "https://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&size=600x300&markers=color:red%7C"+latitude+","+longitude+"&key=AIzaSyDTQDqAjTL_yzzfvmCk1nZLWJMdl65dZco";
 
                 output.innerHTML = "<img src='"+imgUrl+"'>";
