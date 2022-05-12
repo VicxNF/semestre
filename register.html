@@ -88,7 +88,7 @@
 
         <!--Register-->
 
-        <form action="#" class="needs-validation" onsubmit="return submitForm(this);" novalidate>
+        <form action="#" class="needs-validation" novalidate>
           <div class="mb-4">
             <label for="email" class="form-label">Correo Electronico</label>
             <input type="email" class="form-control" id="email" name="email" required>
@@ -184,25 +184,6 @@
 
 
     <script src="script.js"></script>
-  <script src="sweetalert.min.js"></script>
-
-  <script>
-    function submitForm(form){
-      swal({
-        title: "Estas seguro?",
-        text: "Estan todos los datos correctos?",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-      })
-      .then((isOkay) => {
-        if (isOkay) {
-          form.submit();
-        }
-      });
-      return false;
-    }
-  </script>
 
     
     <script>
