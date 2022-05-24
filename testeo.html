@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo</title>
-    <link href="css/estilos.css" type="text/css" rel="Stylesheet">
+    <title>Acerda de Nosotros</title>
+    <link href="estilos.css" type="text/css" rel="Stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
 </head>
 <body style="background: linear-gradient(yellow, orangered)">
-  <!--Barra de navegacion-->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: yellow;">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html" >
@@ -40,7 +39,11 @@
               <li><a class="dropdown-item" href="equipo.html">Equipo de Trabajo</a></li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link "  href="testeo.html">Colaboradores</a>
+          </li>
         </ul>
+        
         <div class="d-flex align-items-center">
         <form class="d-flex input-group w-auto">
             <input
@@ -74,142 +77,63 @@
     </div>
   </nav>
 
-  <div class="gallery">
-    <div class="content">
-        <img class="img-producto rounded" src="img/abelia.jpg" alt="">
-        <h3 class="nombre">Abelia</h3>
-        <p class="desc">Lorem Ipsum is simply dummy</p>
-        <h6 class="precio">$2.990</h6>
-        <button class="buy">Agregar al Carrito</button>
-    </div>
-  
+      <main>
+        <div class="container my-5 text-center">
+            <button class="btn btn-danger w-100" onclick="traer()" >Obtener Colaboradores</button>
+            <div class="mt-5">
+              <table class="table">
+                <thead>
+                 
+                </thead>
+                <tbody  id="contenido">
+                  
+                </tbody>
+              </table>
+                
+            </div>
+        </div>
+    
+        <script>
+          var contenido = document.querySelector('#contenido')
+      
+          function traer() {
+      
+            fetch('https://randomuser.me/api/')
+              .then(res => res.json())
+              .then(data => {
+                contenido.innerHTML = `
+                <div class="card mb-3" style="background: linear-gradient(yellow, orangered);">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="${data.results['0'].picture.large}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Colaborador</h5>
+                    <p class="card-text"><p>Nombre : ${data.results['0'].name.first} </p>
+                                       <p>Apellido : ${data.results['0'].name.last}</p></p>
+                    <p class="card-text">Estos colaboradores son seleccionados al azar por una API que genera de forma aleatoria las personas y sus datos para que aparezcan aqui</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            `
+                /* <img src="${data.results['0'].picture.large}" width="100px" class="rounded float-end">
+                                        <p>Nombre : ${data.results['0'].name.first} </p>
+                                        <p>Apellido : ${data.results['0'].name.last}</p>
+                                        */
+      
+              })
+          }
+      
+      
+        </script>
+        
+           
 
-    <div class="content">
-        <img class="img-producto rounded" src="img/aligustre.jpeg" alt="">
-        <h3 class="nombre">Aligustre</h3>
-        <p class="desc">Lorem Ipsum is simply dummy</p>
-        <h6 class="precio">$2.990</h6>
-        <button class="buy">Agregar al Carrito</button>
-    </div>
-
-    <div class="content">
-        <img class="img-producto rounded" src="img/boina de vasco.jpg" alt="">
-        <h3 class="nombre">Boina de Vasco</h3>
-        <p class="desc">Lorem Ipsum is simply dummy</p>
-        <h6 class="precio">$2.990</h6>
-        <button class="buy">Agregar al Carrito</button>
-    </div>
-
-    <div class="content">
-        <img class="img-producto rounded" src="img/espino albar.jpg" alt="">
-        <h3 class="nombre">Espino Albar</h3>
-        <p class="desc">Lorem Ipsum is simply dummy</p>
-        <h6 class="precio">$2.990</h6>
-        <button class="buy">Agregar al Carrito</button>
-    </div>
-</div>
-
-<div class="gallery">
-  <div class="content">
-      <a href="producto2.html"><img class="img-producto rounded" src="img/margaritas.jpg" alt=""></a>
-      <h3 class="nombre">Margaritas</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-
-  <div class="content">
-      <img class="img-producto rounded" src="img/azaleas.jpg" alt="">
-      <h3 class="nombre">Azaleas</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-
-  <div class="content">
-      <img class="img-producto rounded" src="img/hortensias.jpg" alt="">
-      <h3 class="nombre">Hortensias</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-
-  <div class="content">
-      <img class="img-producto rounded" src="img/lirios rosados.jpg" alt="">
-      <h3 class="nombre">Lirios Rosados</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-</div>
-
-<div class="gallery">
-  <div class="content">
-      <img class="img-producto rounded" src="img/macetero pequeño.jpg" alt="">
-      <h3 class="nombre">Macetero Pequeño</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-
-  <div class="content">
-      <img class="img-producto rounded" src="img/macetero grande.jpg" alt="">
-      <h3 class="nombre">Macetero Grande Cuadrado</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-
-  <div class="content">
-      <img class="img-producto rounded" src="img/macetero grande negro.jpg" alt="">
-      <h3 class="nombre">Macetero Grande Negro</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-
-  <div class="content">
-      <img class="img-producto rounded" src="img/macetero ceramica.jpg" alt="">
-      <h3 class="nombre">Macetero de Ceramica</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-</div>
-
-<div class="gallery">
-  <div class="content">
-      <img class="img-producto rounded" src="img/tierra 6 litros.jpg" alt="">
-      <h3 class="nombre">Tierra de Hojas (6 litros)</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-
-  <div class="content">
-      <img class="img-producto rounded" src="img/tierra 15 litrosx.webp" alt="">
-      <h3 class="nombre">Tierra de Hojas (15 litros)</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-
-  <div class="content">
-      <img class="img-producto rounded" src="img/tierra biologica 40 litros.jpg" alt="">
-      <h3 class="nombre">Tierra Biologica (40 litros)</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-
-  <div class="content">
-      <img class="img-producto rounded" src="img/tierra maceteros.jpg" alt="">
-      <h3 class="nombre">Tierra para Maceteros</h3>
-      <p class="desc">Lorem Ipsum is simply dummy</p>
-      <h6 class="precio">$2.990</h6>
-      <button class="buy">Agregar al Carrito</button>
-  </div>
-</div>
+    
+      </main>
 
       <div class="container-fluid">
         <div class="row">
@@ -234,10 +158,10 @@
                         <div class="col-lg-3 col-xs-12 links">
                             <h4 class="mt-lg-0 mt-sm-3">Quick Links</h4>
                             <ul class="m-0 p-0">
-                                <li>- <a href="#">Maceteros</a></li>
-                                <li>- <a href="#">Flores</a></li>
-                                <li>- <a href="#">Tierra para Hojas</a></li>
-                                <li>- <a href="#">Arbustos</a></li>
+                                <li>- <a href="maceteros.html">Maceteros</a></li>
+                                <li>- <a href="flores.html">Flores</a></li>
+                                <li>- <a href="tierra.html">Tierra para Hojas</a></li>
+                                <li>- <a href="arbustos.html">Arbustos</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-4 col-xs-12 location">
@@ -260,9 +184,6 @@
   
       </div>
     </div>
-
-    <script src="js/script.js"></script>
-      
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -270,5 +191,11 @@
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <script src="script.js"></script>
+
+    
 </body>
 </html>
