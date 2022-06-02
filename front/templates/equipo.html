@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestro Equipo</title>
     <!--estilos.CSS-->
-    <link href="css/estilos.css" type="text/css" rel="Stylesheet">
+    <link href="{% static 'css/estilos.css'%}" type="text/css" rel="Stylesheet">
     <!--CSS boostrap v5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -19,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: yellow;">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html" >
-            <img src="img/logo planta.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
+            <img src="{% static 'img/logo planta.png'%}" alt="" width="50" height="44" class="d-inline-block align-text-top">
                   Insumos Verdes
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -117,7 +118,7 @@
              <!--imagen Paisajismo-->
             <div class="col-8 col-md-4" >
                 <div class="photo-frame position-relative shadow">
-                   <img src="img/paisaje2.jpg" alt="paisaje" width="400" >
+                   <img src="{% static 'img/paisaje2.jpg'%}" alt="paisaje" width="400" >
                 </div>
             </div>
             
@@ -133,7 +134,7 @@
                 <!--tarjeta 1-->
                 <article class="col-10 col-md-10 col-lg-3 bg-withe rounded shadow p-3 fw-light">
                     <!--Icono-->
-                    <img src="img/avatar.jpg" alt="evatar1" class="bg-black bg-gradient d-inline-bloc rounded-circle mb-3 icon-service"> 
+                    <img src="{% static 'img/avatar.jpg'%}" alt="evatar1" class="bg-black bg-gradient d-inline-bloc rounded-circle mb-3 icon-service"> 
                     <!--titulo-->
                     <h3 class="text-capitalize "> Nahid Sandoval</h3>
                     <!--Descripcion-->
@@ -145,7 +146,7 @@
                 <!--tarjeta 2-->
                 <article class="col-10 col-md-10 col-lg-3 bg-withe rounded shadow p-3 fw-light">
                     <!--Icono-->
-                    <img src="img/avatar.jpg" alt="evatar2" class="bg-info bg-gradient d-inline-bloc rounded-circle mb-3 icon-service"> 
+                    <img src="{% static 'img/avatar.jpg'%}" alt="evatar2" class="bg-info bg-gradient d-inline-bloc rounded-circle mb-3 icon-service"> 
                     <!--titulo-->
                     <h3 class="text-capitalize "> Victor Navarro</h3>
                     <!--Descripcion-->
@@ -157,7 +158,7 @@
                 <!--tarjeta 3-->
                 <article class="col-10 col-md-10 col-lg-3 bg-withe rounded shadow p-3 fw-light">
                     <!--Icono-->
-                    <img src="img/avatar.jpg" alt="evatar3" class="bg-danger bg-gradient d-inline-bloc rounded-circle mb-3 icon-service"> 
+                    <img src="{% static 'img/avatar.jpg'%}" alt="evatar3" class="bg-danger bg-gradient d-inline-bloc rounded-circle mb-3 icon-service"> 
                     <!--titulo-->
                     <h3 class="text-capitalize "> Sebastian Aranguiz</h3>
                     <!--Descripcion-->
@@ -252,7 +253,7 @@
     </div>
         
 
-    <script src="js/script.js"></script>
+    <script src="{% static 'js/script.js'%}"></script>
     
     
     

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="css/estilos.css" type="text/css" rel="Stylesheet">
+    <link href="{% static 'css/estilos.css'%}" type="text/css" rel="Stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -16,7 +17,7 @@
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: yellow;">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html" >
-          <img src="img/logo planta.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
+          <img src="{% static 'img/logo planta.png'%}" alt="" width="50" height="44" class="d-inline-block align-text-top">
                 Insumos Verdes
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,13 +80,13 @@
       <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded"></div>
       <div class="col bg-white p-5 rounded-end">
         <div class="text-end">
-          <img src="img/logo planta.png" width="48" alt="">
+          <img src="{% static 'img/logo planta.png'%}" width="48" alt="">
         </div>
         <h2 class="fw-bold text-center py-5">Bienvenido</h2>
 
         <!--Register-->
 
-        <form action="#" class="needs-validation" onsubmit="return submitForm(this);" novalidate>
+        <form action="#" class="needs-validation" novalidate>
           <div class="mb-4">
             <label for="email" class="form-label">Correo Electronico</label>
             <input type="email" class="form-control" id="email" name="email" required>
@@ -180,26 +181,9 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 
-    <script src="js/script.js"></script>
-  <script src="js/sweetalert.min.js"></script>
+    <script src="{% static 'js/script.js'%}"></script>
+  <script src="{% static 'js/sweetalert.min.js'%}"></script>
 
-  <script>
-    function submitForm(form){
-      swal({
-        title: "Estas seguro?",
-        text: "Estan todos los datos correctos?",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-      })
-      .then((isOkay) => {
-        if (isOkay) {
-          form.submit();
-        }
-      });
-      return false;
-    }
-  </script>
 
     
     <script>

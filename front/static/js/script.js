@@ -1,6 +1,6 @@
 
 
-/*const allHoverImages = document.querySelectorAll('.hover-container div img');
+const allHoverImages = document.querySelectorAll('.hover-container div img');
 const imgContainer = document.querySelector('.img-container');
 
 window.addEventListener('DOMContentLoaded', () =>{
@@ -14,7 +14,7 @@ allHoverImages.forEach((image) => {
         image.parentElement.classList.add('active');
     });
 });
-*/
+
 function resetActiveImg(){
     allHoverImages.forEach((img) => {
         img.parentElement.classList.remove('active');
