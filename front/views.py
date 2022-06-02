@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from front.models import Categoria
+from front.models import *
 
 # Create your views here.
 
@@ -55,3 +55,13 @@ def quevendemos(request):
         'listaCategorias': categorias
     }
     return render(request, 'quevendemos.html', datos)
+
+def verproductos(request, codCategoria):
+    v_categoria = Categoria.objects.get(idCategoria=codCategoria)
+
+    v_productos = v_categoria.productos.all()
+
+    datos = {
+        "nombreCategoria":v_categoria.nombreCategoria, "productos":v_productos
+    }
+    return render(request, 'verproductos.html', datos)

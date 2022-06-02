@@ -35,4 +35,5 @@ urlpatterns = [
     path('testeo/', testeo),
     path('tierra/', tierra),
     path('quevendemos/', quevendemos),
+    path('verproductos/<codCategoria>', verproductos)
 ]
