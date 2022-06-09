@@ -17,8 +17,8 @@
     <!--Barra de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: yellow;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html" >
-          <img src="{% static '/img/logo planta.png'%}" alt="" width="50" height="44" class="d-inline-block align-text-top">
+        <a class="navbar-brand" href="{% url 'home' %}" >
+          <img src="{% static 'img/logo planta.png'%}" alt="" width="50" height="44" class="d-inline-block align-text-top">
                 Insumos Verdes
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,19 +27,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="catalogo.html">Catalogo</a>
+              <a class="nav-link" href="{% url 'catalogo' %}">Catalogo</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Ayuda
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="nosotros.html">Acerca de la Pagina</a></li>
+                <li><a class="dropdown-item" href="{% url 'nosotros' %}">Acerca de la Pagina</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="equipo.html">Equipo de Trabajo</a></li>
+                <li><a class="dropdown-item" href="{% url 'equipo' %}">Equipo de Trabajo</a></li>
               </ul>
             </li>
           </ul>
@@ -59,13 +59,13 @@
           </div>
             <br>
             <div class="d-flex align-items-center">
-              <a href="login.html" class="btn btn-outline-warning btn-rounded px-3 me-2">
+              <a href="{% url 'login' %}" class="btn btn-outline-warning btn-rounded px-3 me-2">
                 <i class="bi bi-person-fill"></i>
               </a>
           </div>
           <div class="d-flex align-items-center">
             <!-- Icon -->
-          <a href="carrito.html" class="cart-btn btn btn-outline-warning btn-rounded px-3 me-2 position-relative">
+          <a href="{% url 'carrito' %}" class="cart-btn btn btn-outline-warning btn-rounded px-3 me-2 position-relative">
             <i class="bi bi-cart"></i>
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               0

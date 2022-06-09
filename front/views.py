@@ -37,8 +37,8 @@ def nosotros(request):
 def producto(request):
     return render(request, 'producto.html')
 
-def producto2(request):
-    return render(request, 'producto2.html')
+def margarita(request):
+    return render(request, 'margarita.html')
 
 def register(request):
     return render(request, 'register.html')
