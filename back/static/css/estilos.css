@@ -1,0 +1,823 @@
+main > .container{
+    padding: 30px 0;
+}
+
+#encabezado
+{
+    background-color: blue;
+    height: 25vh;
+}
+
+#encabezadoMenu{
+    background-color: aqua;
+}
+
+.Titulo{
+    text-align: center;
+    
+}
+
+
+
+body{
+    background: linear-gradient(yellow, orangered);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: coral;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+    margin-left: 10px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+
+}
+
+nav a:hover{
+    color: white;
+
+}
+
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+}
+
+.contenedor-columnas{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.columnasx3{
+    width: 25%;
+    float: left;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.columnasx3 img{
+    width: 100%;
+}
+
+p{
+    text-align: justify;
+    
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*---CSS Equipo de trabajo----*/
+
+
+/* NAV */
+.navbar-brand > img {
+    width: 60px;
+
+}
+
+
+.icons-social-networks >a{
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bg-facebook{
+    background-color: #023693;
+}
+
+.bg-twitter{
+    background-color: #33a9f3;
+}
+
+.bg-instagram{
+    background-color: #f1066b;
+}
+
+.photo-frame{
+    font-size: 20px;
+}
+
+.photo-frame::before, .photo-frame::after{
+    content: "";
+    display: block;
+    width: var(--box-size);
+    height: var(--box-size);
+    position: absolute;
+    z-index: -10;
+    animation: turnZ 7s linear alternate-reverse;
+}
+
+.photo-frame::before{
+    --box-size: 3em;
+    background-image: radial-gradient(
+        var(--color-blue-medium) 50%,
+        var(--color-purple) 50%
+
+    );
+    top: calc( 99% - (var(--box-size) / 2));
+    right: calc( 99% - (var(--box-size) / 2));
+}
+
+.photo-frame::after{
+    --box-size: 5em;
+    bottom: calc( 98% - (var(--box-size) / 2));
+    left: calc( 98% - (var(--box-size) / 2));
+    background: linear-gradient(
+        45deg, var(--color-gray-medium) 45% ,
+        transparent 45% 
+    ),
+    radial-gradient(
+        var(--color-purple) 30%,
+        var(--color-yellow) 30% 70%, 
+        var(--color-gray-medium) 70%, 
+        transparent 70%
+    );
+}
+
+.header-main{
+    min-height: 100vh;
+}
+
+/* personas */
+.icon-service{
+    --box-size: 70px;
+    width: var(--box-size);
+    height: var(--box-size);
+    padding: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+
+.wrapper {
+    max-width: 500px;
+    margin: 50px auto
+}
+
+.wrapper .card {
+    max-width: 400px;
+    min-height: 450px;
+    margin: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 0.8rem
+}
+
+.wrapper .card a {
+    text-decoration: none;
+    color: #eee
+}
+
+.wrapper .card a:hover {
+    color: #fff
+}
+
+.wrapper .card .input-field {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #eee;
+    padding: 0.3rem
+}
+
+.wrapper .card .input-field input {
+    background-color: inherit
+}
+
+.wrapper .card .input-field input.form-control,
+.wrapper .card .input-field input.form-control:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #eee
+}
+
+.wrapper .card .input-field button.btn {
+    color: #eee;
+    padding: 0rem;
+    padding-right: 0.5rem
+}
+
+.wrapper .card .input-field button.btn:hover {
+    color: #fff
+}
+
+.wrapper .card .input-field button.btn:focus {
+    border: none;
+    outline: none;
+    box-shadow: none
+}
+
+.wrapper .card .input-field input::placeholder {
+    color: #eee
+}
+
+.wrapper .card .option {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    user-select: none
+}
+
+.wrapper .card .option span.text-light-white:hover {
+    color: #fff
+}
+
+.wrapper .card .option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0
+}
+
+.checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border-radius: 2px
+}
+
+.wrapper .card .option:hover input~.checkmark {
+    background-color: #f1f1f1
+}
+
+.wrapper .card .option input:checked~.checkmark {
+    border: none;
+    background-color: #333;
+    transition: 300ms ease-in-out all
+}
+
+.checkmark:after {
+    content: "\2713";
+    position: absolute;
+    display: none;
+    color: #fff;
+    font-size: 1rem
+}
+
+.wrapper .card .option input:checked~.checkmark:after {
+    display: block
+}
+
+.wrapper .card .option .checkmark:after {
+    left: 3px;
+    top: -3px;
+    width: 5px;
+    height: 10px
+}
+
+.wrapper .card .btn.btn-primary {
+    border-radius: 20px;
+    width: 100px;
+    background-color: #fff;
+    color: #333;
+    border: none
+}
+
+.wrapper .card .btn.btn-primary:hover {
+    color: #fff;
+    background: #333
+}
+
+.wrapper .card .btn.btn-primary:focus {
+    border: none;
+    box-shadow: none
+}
+
+.wrapper .card .text-light-white {
+    color: #ddd
+}
+
+.wrapper .card .line span.connect {
+    position: absolute;
+    top: -12px;
+    left: 33%;
+    color: #000;
+    padding: 0 0.3rem;
+    z-index: 100;
+    border-radius: 2px;
+    background-color: #fff
+}
+
+.wrapper .card .connections a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover
+}
+
+@media(max-width: 370px) {
+    .wrapper .card .line:after {
+        left: 27%
+    }
+}
+
+@media(max-width: 350px) {
+    .wrapper {
+        margin: 10px auto
+    }
+
+    .wrapper .card {
+        margin: 10px
+    }
+}
+
+.bg{
+    background-image: url(img/flores\ naranjas.jpg);
+    background-position: center center;
+}
+
+footer{
+    background: orange;
+    position: absolute;
+    color: white;
+    width: 100vw;
+}
+.social{
+    padding: 0;
+}
+h4{
+    padding: 15px 0px;
+}
+.social li{
+    display: inline-block;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    padding: 0cm;
+}
+.social li a i{
+
+    padding-top: 4px;
+    color: slategray;
+    transition: .3s;
+    font-size: 25px;
+}
+.social li a i:hover{
+    color: rgb(30, 118, 226);
+    text-decoration: none;
+}
+.footer .links ul{
+    list-style-type: none;
+}
+.footer .links li a{
+    color: white;
+    transition: color 0.2s;
+}
+.footer .links li a:hover{
+    text-decoration: none;
+    color: rgb(30, 118, 226);
+}
+.footer .location i{
+    font-size: 18px;
+}
+.footer .copyright p{
+    font-size: 1.3rem;
+    text-shadow: 1px 1px black;
+    border-top: 1px solid rgb(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.8);
+}
+
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.sproduct select{
+    display: block;
+    padding: 5px 10px;
+}
+
+.sproduct input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.sproduct input:focus{
+    outline: none;
+}
+
+.img-producto:hover{
+    opacity: .8;
+}
+
+.nombre{
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.content{
+    width: 20%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: .4s;
+    background: #f2f2f2;
+}
+
+.content:hover{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -8px);
+}
+
+.img-producto{
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.desc{
+    text-align: center;
+    color: #b2bec3;
+    padding-top: 0 8px;
+}
+
+.precio{
+    font-size: 26px;
+    text-align: center;
+    color: #222f3e;
+    margin: 0;
+}
+
+.buy{
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.buy{
+    background: forestgreen;
+}
+
+@media(max-width:1000px){
+    .content{
+        width: 45%;
+    }
+}
+@media(max-width:750px){
+    .content{
+        width: 100%;
+    }
+}
+
+.imgproducto{
+    width: 100%;
+    display: block;
+}
+
+.main-wrapper{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.product-div{
+    margin: 1rem 0;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fff;
+    border-radius: 3px;
+    column-gap: 10px;
+}
+
+.product-div-left{
+    padding: 20px;
+}
+
+.product-div-right{
+    padding: 20px;
+}
+
+.img-container img{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.hover-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.hover-container div{
+    border: 2px solid yellow;
+    padding: 1rem;
+    border-radius: 3px;
+    margin: 0 4px 8px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active{
+    border-color: orangered !important;
+    /* js relate*/
+}
+
+.hover-container div:hover{
+    border-color: orangered !important;
+}
+
+.hover-container div img{
+    width: 50px;
+    cursor: pointer;
+}
+
+.product-div-right span{
+    display: block;
+}
+
+.product-name{
+    font-size: 26px;
+    margin-bottom: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.product-price{
+    font-weight: 700;
+    font-size: 24px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.product-description{
+    font-weight: 18px;
+    line-height: 1.6;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-top: 22px;
+}
+
+.btn-groups{
+    margin-top: 22px;
+}
+
+.btn-groups button{
+    display: inline-block;
+    font-size: 16px;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 15px 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-groups button .bi{
+    margin-right: 8px;
+}
+
+.coupon-btn{
+    background-color: yellow;
+    border: 2px solid yellow;
+    margin-right: 8px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 15px 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.coupon-btn:hover{
+    background-color: #fff;
+    color: yellow;
+}
+
+.add-cart-btn{
+    background-color: yellow;
+    border: 2px solid yellow;
+    margin-right: 8px;
+}
+
+.add-cart-btn:hover{
+    background-color: #fff;
+    color: yellow;
+}
+
+.buy-now-btn{
+    background-color: orangered;
+    border: 2px solid orangered;
+}
+
+.buy-now-btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+
+@media screen and (max-width: 992px){
+    .product-div{
+        grid-template-columns: 100%;
+    }
+    .product-div-right{
+        text-align: center;
+    }
+    .product-description{
+        max-width: 400;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .btn-groups button{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+#cart-container{
+    overflow-x: auto;
+}
+
+#cart-container table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart-container table thead{
+    font-weight: 700;
+}
+
+#cart-container table thead td{
+    background: orangered;
+    color: #fff;
+    border: none;
+    padding: 6px 0;
+}
+
+#cart-container table td{
+    border: 1px solid #b6b3b3;
+    text-align: center;
+}
+
+#cart-container table td:nth-child(1){
+    width: 100px;
+}
+
+#cart-container table td:nth-child(2),
+#cart-container table td:nth-child(3){
+    width: 200px;
+}
+
+#cart-container table td:nth-child(4),
+#cart-container table td:nth-child(5),
+#cart-container table td:nth-child(6){
+    width: 170px;
+}
+
+#cart-container table tbody img{
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+
+#cart-container table tbody i{
+    color: #8d8c89;
+}
+
+#cart-bottom .coupon>div,
+#cart-bottom .total>div{
+    border: 1px solid #b6b3b3;
+}
+
+#cart-bottom .coupon h5,
+#cart-bottom .total h5{
+    background: orangered;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-weight: 700;
+}
+
+#cart-bottom .coupon p,
+#cart-bottom .coupon input{
+    padding: 0 12px;
+}
+
+#cart-bottom .coupon input{
+    height: 44px;
+}
+
+#cart-bottom .coupon input,
+#cart-bottom .coupon button{
+    margin: 0 0 20px 12px;
+}
+
+#cart-bottom .total div>div{
+    padding: 0 12px;
+}
+
+#cart-bottom .total h6{
+    color: black;
+}
+
+.second-hr{
+    background: #b8b7b3;
+    width: 100%;
+    height: 1px;
+}
+
+#cart-bottom .total div>button{
+    margin: 0 12px 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}

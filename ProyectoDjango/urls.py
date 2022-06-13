@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from front.views import *
+from back.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,5 +36,7 @@ urlpatterns = [
     path('testeo/', testeo, name="testeo"),
     path('tierra/', tierra, name="tierra"),
     path('quevendemos/', quevendemos, name="quevendemos"),
-    path('verproductos/<codCategoria>', verproductos, name="verproductos")
+    path('verproductos/<codCategoria>', verproductos, name="verproductos"),
+    path('logindjango/', logindjango, name="logindjango"),
+    path('indexdjango/', indexdjango, name="indexdjango"),
 ]
