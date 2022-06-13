@@ -52,18 +52,23 @@ def tierra(request):
     return render(request, 'tierra.html')
 
 def quevendemos(request):
-    categorias = Categoria.objects.all()
-    datos = {
-        'listaCategorias': categorias
-    }
-    return render(request, 'quevendemos.html', datos)
+    cat = Categoria.objects.all()
+    contexto = {'cat': cat}
+    return render(request, 'quevendemos.html', contexto)
 
-def verproductos(request, codCategoria):
-    v_categoria = Categoria.objects.get(idCategoria=codCategoria)
+def verproductos(request, id):
+    cats = Categoria.objects.get(idCategoria = id)
+    prods = Producto.objects.filter(categoria = cats)
+    contexto = {'cat': cats, 'prods': prods}
+    return render(request, 'verproductos.html', contexto)
 
-    v_productos = v_categoria.productos.all()
+def categorias(request):
+    cat = Categoria.objects.all()
+    contexto = {'cat': cat}
+    return render(request, 'categorias.html', contexto)
 
-    datos = {
-        "nombreCategoria":v_categoria.nombreCategoria, "productos":v_productos
-    }
-    return render(request, 'verproductos.html', datos)
+def leerCategoria(request, id):
+    cats = Categoria.objects.get(idCategoria = id)
+    prods = Producto.objects.filter(categoria = cats)
+    contexto = {'cat': cats, 'prods': prods}
+    return render(request, 'leercategorias.html', contexto)

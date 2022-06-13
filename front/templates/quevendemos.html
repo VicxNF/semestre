@@ -77,11 +77,13 @@
     </h2>
     <h2>Lista de categorias</h2>
     <ul>
-        {% for ca in listaCategorias %}
-        <li>
-            <a href="{% url 'maceteros' %}">{{ ca.nombreCategoria }}</a>
-        </li>
+      {% block content %}
+        {% for i in cat %}
+        
+          <a href="{% url 'verproductos' i.idCategoria %}">{{ i.nombreCategoria }}</a> <br><br>
+        
         {% endfor %}
+      {% endblock content %}
     </ul>
 
     <div class="container-fluid">

@@ -36,8 +36,10 @@ urlpatterns = [
     path('testeo/', testeo, name="testeo"),
     path('tierra/', tierra, name="tierra"),
     path('quevendemos/', quevendemos, name="quevendemos"),
-    path('verproductos/<codCategoria>', verproductos, name="verproductos"),
+    path('quevendemos/<int:id>', verproductos, name="verproductos"),
     path('logindjango/', logindjango, name="logindjango"),
     path('indexdjango/', indexdjango, name="indexdjango"),
     path('validarUsuario/', validarUsuario, name="validarusuario"),
+    path('categorias/', categorias, name="categorias"),
+    path('categorias/<int:id>', leerCategoria, name="leercategorias"),
 ]
