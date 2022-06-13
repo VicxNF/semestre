@@ -20,7 +20,9 @@ def equipo(request):
     return render(request, 'equipo.html')
 
 def flores(request):
-    return render(request, 'flores.html')
+    fotos = Foto.objects.all()
+    datos ={'fotos': fotos} #par ordenado de atributo y valor que se van a pasar a la vista
+    return render(request, 'flores.html', datos)
 
 def geo(request):
     return render(request, 'geo.html')

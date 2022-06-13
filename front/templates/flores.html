@@ -74,39 +74,19 @@
     </div>
   </nav>
 
+  {% for foto in fotos %}
+  <div class="col">
         <div class="gallery">
             <div class="content">
-                <a href="producto2.html"><img class="img-producto rounded" src="{% static 'img/margaritas.jpg'%}" alt=""></a>
-                <h3 class="nombre">Margaritas</h3>
-                <p class="desc">Lorem Ipsum is simply dummy</p>
-                <h6 class="precio">$2.990</h6>
-                <button class="buy">Agregar al Carrito</button>
-            </div>
-    
-            <div class="content">
-                <img class="img-producto rounded" src="{% static 'img/azaleas.jpg'%}" alt="">
-                <h3 class="nombre">Azaleas</h3>
-                <p class="desc">Lorem Ipsum is simply dummy</p>
-                <h6 class="precio">$2.990</h6>
-                <button class="buy">Agregar al Carrito</button>
-            </div>
-    
-            <div class="content">
-                <img class="img-producto rounded" src="{% static 'img/hortensias.jpg'%}" alt="">
-                <h3 class="nombre">Hortensias</h3>
-                <p class="desc">Lorem Ipsum is simply dummy</p>
-                <h6 class="precio">$2.990</h6>
-                <button class="buy">Agregar al Carrito</button>
-            </div>
-    
-            <div class="content">
-                <img class="img-producto rounded" src="{% static 'img/lirios rosados.jpg'%}" alt="">
-                <h3 class="nombre">Lirios Rosados</h3>
+                <a href="producto2.html"><img class="img-producto rounded" src="{% static 'img/'%}{{foto.nombreArchivo}}" alt=""></a>
+                <h3 class="nombre">{{foto.nombreFoto}}</h3>
                 <p class="desc">Lorem Ipsum is simply dummy</p>
                 <h6 class="precio">$2.990</h6>
                 <button class="buy">Agregar al Carrito</button>
             </div>
         </div>
+  </div>
+  {% endfor %}
 
       <div class="container-fluid">
         <div class="row">

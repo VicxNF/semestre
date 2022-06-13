@@ -39,4 +39,5 @@ urlpatterns = [
     path('verproductos/<codCategoria>', verproductos, name="verproductos"),
     path('logindjango/', logindjango, name="logindjango"),
     path('indexdjango/', indexdjango, name="indexdjango"),
+    path('validarUsuario/', validarUsuario, name="validarusuario"),
 ]
