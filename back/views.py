@@ -27,7 +27,9 @@ def validarUsuario(request):
 
 
 def indexdjango(request):
+    nom = Usuario.objects.all()
+    context = {'nom': nom}
     if 'usuario' not in request.session:
         return redirect('/logindjango/')
 
-    return render(request, 'indexdjango.html')
+    return render(request, 'indexdjango.html', context)
