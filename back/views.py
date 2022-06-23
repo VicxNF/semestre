@@ -19,6 +19,7 @@ def validarUsuario(request):
 
         if usu:
             request.session['usuario'] = v_email
+            request.session['nombre'] = usu.nombre
             return redirect('/indexdjango/')
 
     except:
@@ -27,9 +28,12 @@ def validarUsuario(request):
 
 
 def indexdjango(request):
-    nom = Usuario.objects.all()
-    context = {'nom': nom}
+    #nom = Usuario.objects.all()
+    
     if 'usuario' not in request.session:
         return redirect('/logindjango/')
+    else:
+        context = {'nom': request.session['nombre']} 
+        
 
-    return render(request, 'indexdjango.html', context)
+        return render(request, 'indexdjango.html', context)
