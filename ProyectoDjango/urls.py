@@ -44,4 +44,5 @@ urlpatterns = [
     path('categorias/', categorias, name="categorias"),
     path('categorias/<int:id>', leerCategoria, name="leercategorias"),
     path('api/', include('api.urls')),
+    path('', mantenedor),
 ]

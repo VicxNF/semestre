@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from front.models import *
+from .forms import *
 
 # Create your views here.
 
@@ -72,3 +73,9 @@ def leerCategoria(request, id):
     prods = Producto.objects.filter(categoria = cats)
     contexto = {'cat': cats, 'prods': prods}
     return render(request, 'leercategorias.html', contexto)
+
+def mantenedor(request):
+    data = {
+        'form': ProductoForm
+    }
+    return render(request, 'mantenedor.html', data)
