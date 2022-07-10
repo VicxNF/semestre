@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from front.models import *
 from .forms import *
+from django.contrib import messages
 
 # Create your views here.
 
@@ -78,4 +79,44 @@ def mantenedor(request):
     data = {
         'form': ProductoForm
     }
+
+    if request.method == 'POST':
+        formulario = ProductoForm(data=request.POST, files=request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            data["mensaje"] = "Guardado correctamente"
+        else:
+            data["form"] = formulario
     return render(request, 'mantenedor.html', data)
+
+def listarProductos(request):
+    productos = Producto.objects.all()
+    data = {
+        'productos': productos
+    }
+    return render(request, 'listar.html', data)
+
+def modificarProducto(request, id):
+
+    producto = get_object_or_404(Producto, idProducto=id)
+
+    data = {
+        'form': ProductoForm(instance=producto)
+    }
+
+    if request.method == 'POST':
+        formulario = ProductoForm(data=request.POST, instance=producto, files=request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect(to="listar")
+        data["form"] = formulario
+
+    return render(request, 'modificar.html', data)
+
+def eliminarProducto(request,id):
+    
+    producto = get_object_or_404(Producto, idProducto=id)
+
+    producto.delete()
+
+    return redirect(to="listar")

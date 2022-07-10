@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from operator import mod
 from django.db import models
 
@@ -12,7 +13,7 @@ class Categoria(models.Model):
 class Producto(models.Model):
     idProducto = models.IntegerField(primary_key=True, verbose_name='ID del producto')
     nombreProducto = models.CharField(max_length=60, verbose_name='Nombre del producto')
-    imagen = models.CharField(max_length=100, verbose_name='Imagen del producto')
+    imagen = models.ImageField(upload_to="productos/", null=True)
     precio = models.IntegerField(verbose_name='Precio del producto')
     stock = models.IntegerField(verbose_name='Stock del producto')
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, related_name='productos')

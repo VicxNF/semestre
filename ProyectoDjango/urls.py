@@ -18,6 +18,8 @@ from django.urls import path, include
 from front.views import *
 from back.views import *
 from api.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -44,5 +46,11 @@ urlpatterns = [
     path('categorias/', categorias, name="categorias"),
     path('categorias/<int:id>', leerCategoria, name="leercategorias"),
     path('api/', include('api.urls')),
-    path('', mantenedor),
+    path('', mantenedor, name="mantenedor"),
+    path('listar/', listarProductos, name="listar"),
+    path('modificar/<id>/', modificarProducto, name="modificar"),
+    path('eliminar/<id>/', eliminarProducto, name="eliminar"),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

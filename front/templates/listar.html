@@ -75,20 +75,44 @@
         </div>
       </div>
     </nav>
-            <div class="row">
-              <h1>Modificar Producto</h1>
-                    <form action="" method="post" id="formulario" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        <div class="form-group">
-                        {{ form.as_table }}
-                        </div>
 
-                            <input type="submit" id="enviar" value="Modificar" class="btn btn-primary">
-                            <input type="reset" id="limpiar" value="Limpiar" class="btn btn-secondary">
-                            <div class="alert alert-danger" id="error" role="alert"></div>
-                    </form>
-                    {{mensaje}}
-                </div>
+    <div class="row">
+        <h1>Listado de Productos</h1>
+    </div>
+    <div class="row">
+        <table border="1">
+            <tr>
+                <td>Id del Producto</td>
+                <td>Nombre del Producto</td>
+                <td>Imagen del Producto</td>
+                <td>Precio del Producto</td>
+                <td>Stock del Producto</td>
+                <td>Categoria del Producto</td>
+                <td>Opciones</td>
+            </tr>
+            {% for pro in productos %}
+
+            <tr>
+                <td>{{ pro.idProducto }}</td>
+                <td>{{ pro.nombreProducto }}</td>
+                {% if pro.imagen %}
+                <td scope="row"><img src="{{ pro.imagen.url}}" style="height: 100px; width: 150px;" alt=""></td>
+                {% else %}
+                <td scope="row"><img src="" style="height: 50px; width: 50px;" alt="no imagen"></td>
+                {% endif %}
+                <td>{{ pro.precio }}</td>
+                <td>{{ pro.stock }}</td>
+                <td>{{ pro.categoria }}</td>
+                <td>
+                    <a href="{% url 'modificar' pro.idProducto %}" class="btn btn-info">Modificar</a>
+                    <a href="{% url 'eliminar' pro.idProducto %}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </div>
+
 
 </div>
     <div class="container-fluid">

@@ -75,26 +75,20 @@
         </div>
       </div>
     </nav>
-
-    <div class="card">
-        <div class="card-body">
-
             <div class="row">
-                <div class="col-12 col-md-6 offser-md-3">
-
-                    <form action="" method="post">
-
+              <h1>Nuevo Producto</h1>
+                    <form action="" method="post" id="formulario" enctype="multipart/form-data">
                         {% csrf_token %}
-                        {{ form }}
-                        <div class="d-flex justify-content-center">
-                            <input type="submit" value="Enviar" class="btn btn-primary">
-                            <input type="submit" value="Enviar" class="btn btn-primary">
+                        <div class="form-group">
+                        {{ form.as_table }}
                         </div>
+
+                            <input type="submit" id="enviar" value="Enviar" class="btn btn-primary">
+                            <input type="reset" id="limpiar" value="Limpiar" class="btn btn-secondary">
+                            <div class="alert alert-danger" id="error" role="alert"></div>
                     </form>
+                    {{mensaje}}
                 </div>
-            </div>
-        </div>
-    </div>
 
 </div>
     <div class="container-fluid">
