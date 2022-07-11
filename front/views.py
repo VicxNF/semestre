@@ -53,6 +53,9 @@ def testeo(request):
 def tierra(request):
     return render(request, 'tierra.html')
 
+def productosApi(request):
+    return render(request, 'productosapi.html')
+
 def quevendemos(request):
     cat = Categoria.objects.all()
     contexto = {'cat': cat}
