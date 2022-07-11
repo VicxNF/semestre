@@ -51,7 +51,7 @@ urlpatterns = [
     path('validarUsuario/', validarUsuario, name="validarusuario"),
     path('categorias/', categorias, name="categorias"),
     path('categorias/<int:id>', leerCategoria, name="leercategorias"),
-    path('api/', include(router.urls)),
+    path('api/', include(router.urls), name="api"),
     path('', mantenedor, name="mantenedor"),
     path('listar/', listarProductos, name="listar"),
     path('modificar/<id>/', modificarProducto, name="modificar"),

@@ -32,6 +32,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'catalogo' %}">Catalogo</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'productosapi' %}">Api</a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Ayuda
@@ -40,6 +43,16 @@
                 <li><a class="dropdown-item" href="{% url 'nosotros' %}">Acerca de la Pagina</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="{% url 'equipo' %}">Equipo de Trabajo</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mantenedor
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{% url 'mantenedor' %}">Añadir Producto</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'listar' %}">Lista de Productos</a></li>
               </ul>
             </li>
           </ul>
@@ -127,41 +140,41 @@
       <div class="row row-cols-1 row-cols-md-4 g-4">
         <div class="col">
           <div class="card border-primary mb-3">
-            <a href = "maceteros.html"><img src="{% static '/img/macetero.jpg' %}" class="card-img-top" alt="..." height="220"></a>
+            <a href = "{% url 'maceteros' %}"><img src="{% static '/img/macetero.jpg' %}" class="card-img-top" alt="..." height="220"></a>
             <div class="card-body">
               <h5 class="card-title">Maceteros</h5>
               <p>Los mejores maceteros para tus plantas las encontrarás aquí</p>
-              <a href="maceteros.html" class="btn btn-outline-success">Ver Mas...</a>
+              <a href="{% url 'maceteros' %}" class="btn btn-outline-success">Ver Mas...</a>
               </div>
           </div>
         </div>
         <div class="col">
           <div class="card border-primary mb-3">
-            <a href=tierra.html><img src="{% static '/img/tierra.jpg' %}" class="card-img-top" alt="..." height="220"></a>
+            <a href="{% url 'tierra' %}"><img src="{% static '/img/tierra.jpg' %}" class="card-img-top" alt="..." height="220"></a>
             <div class="card-body">
               <h5 class="card-title">Tierra de Hojas</h5>
               <p>La mejor calidad en tierra de hojas</p>
-              <a href="tierra.html" class="btn btn-outline-success">Ver Mas...</a>
+              <a href="{% url 'tierra' %}" class="btn btn-outline-success">Ver Mas...</a>
               </div>
           </div>
         </div>
         <div class="col">
           <div class="card border-primary mb-3">
-            <a href="flores.html"><img src="{% static 'img/flores.jpg' %}" class="card-img-top" alt="..." height="220"></a>
+            <a href="{% url 'flores' %}"><img src="{% static 'img/flores.jpg' %}" class="card-img-top" alt="..." height="220"></a>
             <div class="card-body">
               <h5 class="card-title">Flores</h5>
               <p>Las flores mas hermosas que puedas imaginar, solo aqui</p>
-              <a href="flores.html" class="btn btn-outline-success">Ver Mas...</a>
+              <a href="{% url 'flores' %}" class="btn btn-outline-success">Ver Mas...</a>
               </div>
           </div>
         </div>
         <div class="col">
           <div class="card border-primary mb-3">
-            <a href="arbustos.html"><img src="{% static '/img/arbustos.jpg' %}" class="card-img-top" alt="..." height="220"></a>
+            <a href="{% url 'arbustos' %}"><img src="{% static '/img/arbustos.jpg' %}" class="card-img-top" alt="..." height="220"></a>
             <div class="card-body">
               <h5 class="card-title">Arbustos</h5>
               <p>Los mejores arbustos para decorar tu jardin</p>
-              <a href="arbustos.html" class="btn btn-outline-success">Ver Mas...</a>
+              <a href="{% url 'arbustos' %}" class="btn btn-outline-success">Ver Mas...</a>
               </div>
           </div>
         </div>
