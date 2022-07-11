@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insumos Verdes</title>
     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link href="{% static 'css/estilos.css'%}" type="text/css" rel="Stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -76,63 +77,34 @@
       </div>
     </nav>
 
-    <main>
-      <div class="container my-5 text-center">
-          <button class="btn btn-danger w-100" onclick="traer()" >Obtener Colaboradores</button>
-          <div class="mt-5">
-            <table class="table">
-              <thead>
-               
-              </thead>
-              <tbody  id="contenido">
-                
-              </tbody>
-            </table>
-              
-          </div>
+    <div class="container-fluid">
+      <div class="row">
+        <h1>Datos</h1>
       </div>
-  
-      <script>
-        var contenido = document.querySelector('#contenido')
-    
-        function traer() {
-    
-          fetch('https://randomuser.me/api/')
-            .then(res => res.json())
-            .then(data => {
-              contenido.innerHTML = `
-              <div class="card mb-3" style="background: linear-gradient(yellow, orangered);">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="${data.results['0'].picture.large}" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Colaborador</h5>
-                  <p class="card-text"><p>Nombre : ${data.results['0'].name.first} </p>
-                                     <p>Apellido : ${data.results['0'].name.last}</p></p>
-                  <p class="card-text">Estos colaboradores son seleccionados al azar por una API que genera de forma aleatoria las personas y sus datos para que aparezcan aqui</p>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          `
-              /* <img src="${data.results['0'].picture.large}" width="100px" class="rounded float-end">
-                                      <p>Nombre : ${data.results['0'].name.first} </p>
-                                      <p>Apellido : ${data.results['0'].name.last}</p>
-                                      */
-    
-            })
-        }
-    
-    
-      </script>
-      
-         
+      <div class="row">
+        <div class="col-1">
+          <button id="boton1" class="btn btn-primary">Traer Datos</button>
+        </div>
+      </div>
+    </div>
 
-  
-    </main>
+    <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Imagen</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Categoria</th>
+          </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+      </table>
+    </div>
 
 </div>
     <div class="container-fluid">
@@ -185,10 +157,33 @@
     </div>
   </div>
 
-  <script src="{% static '/js/script.js' %}"></script>
+  
+  <script>
+  $("#boton1").click(
+    function()
+    {
+    let url = "http://localhost:8000/api/productos"
+    fetch(url)
+      .then(response => response.json())
+      .then(data => mostrarData(data))
+      .catch(error => console.log(error))
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
-integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    const mostrarData = (data) => {
+      console.log(data)
+      let body = ''
+      for (let i = 0; i<data.length; i++){
+        body += `<tr><td>${data[i].idProducto}</td><td>${data[i].nombreProducto}</td><td><img src="${data[i].imagen}" style="height: 100px; width: 150px;"</td><td>${data[i].precio}</td><td>${data[i].stock}</td><td>${data[i].categoria}</td></tr>`
+      }
+
+      document.getElementById('data').innerHTML = body
+    }
+    }
+  );
+
+  </script>
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
 integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
